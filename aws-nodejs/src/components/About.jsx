@@ -5,7 +5,7 @@ function About() {
     
     const handleClick =()=> {
         setCount(count + 1)
-        //https://chat.whatsapp.com/IfHOpo7KnI09UO4yyqaOQo
+        
         
     }
   return (
