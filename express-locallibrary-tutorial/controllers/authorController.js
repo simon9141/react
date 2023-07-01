@@ -2,13 +2,15 @@ const author = require('../models/author')
 const asyncHandler = require('express-async-handler')
 
 // @desc    Get all authors
-exports.author_list = asyncHandler(async(req, res, next)=>{
-    const allAuthors = await author.find().sort({family_name:1}).exec();
-    res.render("author_list", {
-      title: "Author List", 
-      author_list: allAuthors
-    })
-})
+// Display list of all Authors.
+exports.author_list = asyncHandler(async (req, res, next) => {
+  const allAuthors = await author.find().sort({ family_name: 1 }).exec();
+  res.render("author_list", {
+    title: "Author List",
+    author_list: allAuthors,
+  });
+});
+
 
 // @route   GET /api/authors
 exports.author_detail= asyncHandler(async(req, res, next)=>{
